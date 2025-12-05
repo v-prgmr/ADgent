@@ -1,6 +1,14 @@
-# Copenhagen Hack - Ad Generation Pipeline
+<h1 align="center">ADgent - Ad Generation Pipeline</h1>
 
-AI-powered ad generation system that creates complete video ads with storyboards, scenes, and voiceovers.
+<p align="center">
+<img src="https://github.com/v-prgmr/aDgent/blob/main/frontend.png" alt="ADgent Frontend" width="730">
+</p>
+
+<p align="center"><b>AI-powered ad generation system that creates complete video ads with storyboards, scenes, and voiceovers.</b></p>
+
+<p align="center">
+<a href=""><img alt="Python Versions" src="https://img.shields.io/badge/python-3.9--3.15-dark_green"></a>
+</p>
 
 ## Features
 
@@ -29,19 +37,17 @@ pip install -r requirements.txt
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file in the project root:
+Create a `.env` file like `.env.example` in the project root:
 
 ```bash
 # Google Generative AI
 GOOGLE_API_KEY=your_google_api_key_here
-GEMINI_IMAGE_MODEL=models/gemini-2.0-flash
 
 # OpenAI
 OPENAI_API_KEY=your_openai_api_key_here
 
 # ElevenLabs TTS
 ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
-ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM  # Optional: Rachel voice (default)
 ```
 
 ### 4. Start the Server
@@ -96,7 +102,7 @@ image: <file>
 POST /generate-scenes
 ```
 
-### 5. Generate Voiceovers (NEW!)
+### 5. Generate Voiceovers 
 
 ```bash
 POST /generate-voiceovers
@@ -126,30 +132,24 @@ curl -X POST "http://localhost:8000/generate-voiceovers"
 ## Output Structure
 
 ```
-copenhagenhack/
+adgent/
 ├── images/
 │   ├── generated_storyboard.json  # Storyboard data
 │   ├── char_asset1.png            # Character assets
 │   └── scene1.png                 # Scene references
 ├── generated_scenes/
-│   ├── scene1.png                 # Generated scenes
-│   ├── scene2.png
-│   └── audio/
-│       ├── scene1_voiceover.mp3   # Voiceover audio files
-│       └── scene2_voiceover.mp3
+│   └── website-slug
+│       └── images/  
+│           ├── scene1.png                 # Generated scenes
+│           ├── scene2.png
+│       └── audio/
+│           ├── scene1_voiceover.mp3       # Voiceover audio files
+│           └── scene2_voiceover.mp3
+│       └── videos/
+│           ├── scene1.mp4                 # Generate videos
+│           └── scene2.mp4
+│       └── final_video.mp4                # Generated final advertisement
 ```
-
-## Testing
-
-Test the TTS functionality:
-
-```bash
-python test_tts.py
-```
-
-## Documentation
-
-- [TTS Setup Guide](TTS_SETUP.md) - Detailed ElevenLabs integration guide
 
 ## Tech Stack
 
