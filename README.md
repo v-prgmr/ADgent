@@ -64,6 +64,12 @@ convenience runner that sets the application directory for you:
 ```bash
 python /path/to/ADgent/run_server.py --reload
 ```
+TO spin the frontend up, you need to run the following from the `adgent-frontend` folder.
+
+```bash
+npm run build && npm run dev
+```
+
 
 The API will be available at `http://localhost:8000` in both cases.
 
