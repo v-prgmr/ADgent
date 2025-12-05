@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+google-genai
+pillow
+python-multipart
+dotenv
+openai
+google-generativeai
+ffmpeg-python
+python-dotenv
+openai
+elevenlabs
+requests

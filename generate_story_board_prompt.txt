@@ -1,0 +1,27 @@
+You are a structured output generator.
+
+I want to create a video advertisement for this concept/ storyboard.
+The story is: {insert story summary here}.
+
+Your task:
+Generate a storyboard of exactly 5 scenes for this video. The 5 scenes will be used to generate 6 videos by using every consecutive
+screen as first and last frame for generating the video. The storyboard should include only 2 people in explaining the concept.
+
+For each scene, provide:
+1. A detailed "scene_description" explaining what happens visually.
+2. A "voice_over_text" that could be narrated during that scene.
+
+Output **only** valid JSON. Do not include any text, explanations, or Markdown formatting.
+Do not wrap the JSON in code fences or add commentary.
+
+The JSON must be an array of 5 objects, each having exactly these keys:
+- "scene_description"
+- "voice_over_text"
+
+Example of the expected output format:
+[
+  {
+    "scene_description": "Description of what happens in the scene...",
+    "voice_over_text": "Narration or dialogue to be spoken during the scene..."
+  }
+]
