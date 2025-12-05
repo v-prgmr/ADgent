@@ -1,0 +1,10 @@
+images/
+generated_scenes/
+.env
+venv
+.DS_Store
+__pycache__
+node_modules
+bun.lock*
+adgent-frontend/node_modules
+lightpanda-scraper
